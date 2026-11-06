@@ -419,10 +419,10 @@ function buildPrints(){
     P.text('K', c-30, 262, 'italic 400 76px "Playfair Display"', 'ink', INK);
     P.text('I', c+32, 262, 'italic 400 76px "Playfair Display"', 'ink', INK);
     P.stroke(g => { g.moveTo(c+7,196); g.lineTo(c-7,290); }, 2, 'ink', '#8a6a2c');
-    P.text('ومن آياته أن خلق لكم من أنفسكم أزواجا لتسكنوا إليها', c, 438, '400 54px "Aref Ruqaa"', 'ink', OLIVE);
-    P.text('وجعل بينكم مودة ورحمة', c, 514, '400 54px "Aref Ruqaa"', 'ink', OLIVE);
-    P.text('ENSEMBLE AVEC LEURS FAMILLES', c, 622, '500 36px Jost', 'ink', TERRA, 10);
-    P.text('ont la joie de vous convier à la célébration de leur mariage', c, 688, '400 46px Jost', 'ink', '#1f1e18');
+    P.text('ومن آياته أن خلق لكم من أنفسكم أزواجا', c, 440, '700 76px "Aref Ruqaa"', 'ink', OLIVE);
+    P.text('لتسكنوا إليها وجعل بينكم مودة ورحمة', c, 540, '700 76px "Aref Ruqaa"', 'ink', OLIVE);
+    P.text('ENSEMBLE AVEC LEURS FAMILLES', c, 636, '500 36px Jost', 'ink', TERRA, 10);
+    P.text('ont la joie de vous convier à la célébration de leur mariage', c, 700, '400 46px Jost', 'ink', '#1f1e18');
     P.text('Khadija', c, 892, 'italic 400 200px "Playfair Display"', 'ink', INK);
     P.text('&', c, 1004, 'italic 400 100px "Playfair Display"', 'ink', '#8a6a2c');
     P.text('Ilyass', c, 1186, 'italic 400 200px "Playfair Display"', 'ink', INK);
@@ -537,7 +537,7 @@ function buildLeaves(){
 
 /* ---------------- build ---------------- */
 if(document.fonts){
-  const fams = ['italic 400 100px "Playfair Display"','italic 500 100px "Playfair Display"','600 100px "Playfair Display"','500 100px "Playfair Display"','500 30px Jost','300 30px Jost','400 50px "Aref Ruqaa"'];
+  const fams = ['italic 400 100px "Playfair Display"','italic 500 100px "Playfair Display"','600 100px "Playfair Display"','500 100px "Playfair Display"','500 30px Jost','300 30px Jost','700 76px "Aref Ruqaa"'];
   await Promise.race([Promise.all(fams.map(f => document.fonts.load(f, /Ruqaa/.test(f) ? 'ومن آياته' : 'Khadija & Ilyass 2407'))), new Promise(r => setTimeout(r, 3500))]);
 }
 buildPrints(); buildCard(); linen(); buildLeaves();
