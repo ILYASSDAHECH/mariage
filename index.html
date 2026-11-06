@@ -411,7 +411,7 @@ function wreath(P, cx, cy, r, kind){
   }
 }
 function buildPrints(){
-  texFront = printJob(R, RH, '#fbf7ef', P => {
+  texFront = printJob(R, RH, '#bccaa0', P => {
     const {w,h} = P, c = w/2;
     P.stroke(g => g.rect(56,56,w-112,h-112), 2.4, 'foil');
     P.stroke(g => g.rect(74,74,w-148,h-148), 1, 'foil');
@@ -464,7 +464,7 @@ function halfTex(src, right){
 /* ---------------- card ---------------- */
 const card = new THREE.Group(), flipper = new THREE.Group();
 function buildCard(){
-  const edge = new THREE.MeshStandardMaterial({color:0xf1eadc, roughness:.95});
+  const edge = new THREE.MeshStandardMaterial({color:0xb3c196, roughness:.95});
   const m = new THREE.Mesh(new THREE.BoxGeometry(W,H,T), [edge,edge,edge,edge, paperMat(texFront), paperMat(texBack,{bumpScale:1.6})]);
   m.castShadow = m.receiveShadow = true;
   flipper.add(m); card.add(flipper);
