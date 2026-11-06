@@ -324,7 +324,7 @@ if(!renderer){ intro.addEventListener('click', () => { if(!opened){ opened = tru
 const mobile = innerWidth < 700;
 renderer.setPixelRatio(Math.min(mobile ? 2 : 1.75, devicePixelRatio || 1));
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = .84;
+renderer.toneMappingExposure = .98;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.VSMShadowMap;
@@ -422,7 +422,7 @@ function buildPrints(){
     P.text('ومن آياته أن خلق لكم من أنفسكم أزواجا لتسكنوا إليها', c, 438, '400 54px "Aref Ruqaa"', 'ink', OLIVE);
     P.text('وجعل بينكم مودة ورحمة', c, 514, '400 54px "Aref Ruqaa"', 'ink', OLIVE);
     P.text('ENSEMBLE AVEC LEURS FAMILLES', c, 622, '500 36px Jost', 'ink', TERRA, 10);
-    P.text('ont la joie de vous convier à la célébration de leur mariage', c, 688, '300 42px Jost', 'ink', '#4f4a3a');
+    P.text('ont la joie de vous convier à la célébration de leur mariage', c, 688, '400 42px Jost', 'ink', '#2c2b22');
     P.text('Khadija', c, 892, 'italic 400 200px "Playfair Display"', 'ink', INK);
     P.text('&', c, 1004, 'italic 400 100px "Playfair Display"', 'foil');
     P.text('Ilyass', c, 1186, 'italic 400 200px "Playfair Display"', 'ink', INK);
@@ -432,7 +432,7 @@ function buildPrints(){
     P.text('SAMEDI', c-345, y, '500 44px Jost', 'ink', INK, 8);
     P.text('24 JUILLET', c, y, '500 48px Jost', 'ink', TERRA, 6);
     P.text('2027', c+345, y, '500 44px Jost', 'ink', INK, 8);
-    P.text('Votre présence sera notre plus beau cadeau', c, 1515, 'italic 400 46px "Playfair Display"', 'ink', '#5a5546');
+    P.text('Votre présence sera notre plus beau cadeau', c, 1515, 'italic 500 46px "Playfair Display"', 'ink', '#2c2b22');
     P.text('COMPLEXE', c, 1642, '500 38px Jost', 'ink', OLIVE, 14);
     P.text('Dar Annassim', c, 1762, 'italic 400 116px "Playfair Display"', 'ink', TERRA);
     sprig(P, c, 1850, 1.1, 'ink', '#7f8f68');
