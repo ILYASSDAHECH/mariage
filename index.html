@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Khadija &amp; Ilyass — Mariage</title>
+<meta name="description" content="Khadija &amp; Ilyass vous invitent à leur mariage — samedi 24 juillet 2027, Complexe Dar Annassim.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ilyassdahech.github.io/mariage/">
+<meta property="og:title" content="Khadija &amp; Ilyass — Invitation au mariage">
+<meta property="og:description" content="Samedi 24 juillet 2027 · Complexe Dar Annassim. Ouvrez l'enveloppe.">
+<meta property="og:image" content="https://ilyassdahech.github.io/mariage/preview.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6efe3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Jost:wght@300;400;500&family=Aref+Ruqaa:wght@400;700&display=swap">
+<style>
+/* Daylight summer garden: cream paper, terracotta, sage olive. A breeze (nassim) carries petals across. */
+:root{
+  --paper:#f6efe3;
+  --paper-2:#efe4d2;
+  --ink:#3b3a2e;
+  --ink-dim:#6f6a58;
+  --terra:#c0603d;
+  --terra-soft:#e2a487;
+  --sage:#8a9a72;
+  --olive:#4c5a3a;
+  --blush:#f0d3c2;
+  --sky:#d9e8e6;
+  --line:rgba(192,96,61,.45);
+  --f-display:"Playfair Display","Didot","Bodoni 72",Georgia,serif;
+  --f-sans:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+  --f-ar:"Aref Ruqaa","Amiri","Traditional Arabic",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-sans);font-weight:300;font-size:clamp(16px,.6vw + 13px,19px);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.locked{overflow:hidden;height:100svh}
+h1,h2,h3,p{margin:0;font-weight:400}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--terra);outline-offset:4px}
+.label{font-family:var(--f-sans);font-weight:500;letter-spacing:.32em;text-transform:uppercase;font-size:.7em;color:var(--terra)}
+.display{font-family:var(--f-display);font-style:italic;font-weight:400;line-height:1}
+.ar{font-family:var(--f-ar);direction:rtl}
+
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .3 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+#scene{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;background:#e9dfcd}
+#intro{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:max(48px,9vh) 16px max(40px,8vh);cursor:pointer;transition:opacity .9s ease,visibility .9s;text-align:center}
+#intro.gone{opacity:0;visibility:hidden;pointer-events:none}
+#intro .label{color:var(--ink);background:rgba(246,239,227,.7);padding:8px 16px;border-radius:999px}
+.intro-title{font-family:var(--f-display);font-style:italic;font-size:clamp(30px,8vw,46px);color:var(--ink);margin-top:10px}
+.hint{font:inherit;font-size:.85em;color:var(--ink);letter-spacing:.08em;background:rgba(255,250,241,.75);border:1px solid var(--line);border-radius:999px;padding:12px 22px;cursor:pointer;animation:breath 2.4s ease-in-out infinite}
+.hint b{font-weight:500;color:var(--terra)}
+@keyframes breath{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.panel{background:rgba(255,250,241,.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:200px 200px 18px 18px;padding:clamp(70px,16vw,96px) clamp(18px,5vw,40px) 40px;box-shadow:0 30px 60px -36px rgba(80,60,30,.4)}
+.spacer{height:55svh}
+/* ---------- page ---------- */
+main{position:relative;z-index:1}
+section{position:relative;padding:clamp(48px,8vh,90px) 16px;display:grid;justify-items:center;text-align:center}
+.wrap{width:min(100%,640px);display:grid;justify-items:center;gap:22px}
+
+/* hero card */
+.hero{min-height:118svh;align-content:end;padding-bottom:6svh}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#vignette{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(120% 90% at 50% 45%,transparent 55%,rgba(60,48,30,.28))}
+.arch{position:relative;width:min(100%,520px);padding:clamp(104px,26vw,130px) clamp(22px,7vw,56px) clamp(80px,18vw,96px);
+  display:grid;justify-items:center;gap:18px}
+.arch>svg.frame{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:-1}
+.verse{font-size:clamp(17px,4.4vw,22px);line-height:1.9;color:var(--olive);max-width:24em}
+.names{display:grid;justify-items:center;gap:4px;margin:6px 0}
+.names .display{font-size:clamp(58px,17vw,104px);color:var(--ink);letter-spacing:-.01em}
+.names .amp{font-family:var(--f-display);font-style:italic;font-size:clamp(30px,8vw,48px);color:var(--terra);line-height:1}
+.lede{max-width:22em;color:var(--ink-dim)}
+.scroll-cue{margin-top:14px;display:grid;justify-items:center;gap:6px;font-size:.72em;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-dim)}
+.scroll-cue i{display:block;width:1px;height:42px;background:linear-gradient(var(--terra),transparent);animation:cue 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* branches */
+.branch{position:absolute;width:clamp(120px,32vw,220px);pointer-events:none;opacity:.95}
+.b-tl{top:-18px;left:-22px;transform:rotate(8deg)}
+.b-br{bottom:-22px;right:-24px;transform:rotate(188deg)}
+
+/* date */
+.date-big{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(12px,4vw,28px);width:min(100%,520px)}
+.date-big .side{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;font-weight:500;letter-spacing:.28em;text-transform:uppercase;font-size:.78em}
+.date-big .day{font-family:var(--f-display);font-size:clamp(84px,22vw,132px);line-height:.9;color:var(--terra)}
+.year{font-family:var(--f-display);font-style:italic;font-size:1.4em;color:var(--olive)}
+
+.cal{width:min(100%,340px);margin-top:10px;display:grid;grid-template-columns:repeat(7,1fr);gap:6px 0;font-size:.85em}
+.cal .h{font-size:.7em;letter-spacing:.14em;color:var(--ink-dim);font-weight:500;padding-bottom:6px}
+.cal span{display:grid;place-items:center;aspect-ratio:1;position:relative}
+.cal .mark{color:#fff;font-weight:500}
+.cal .mark::before{content:"";position:absolute;inset:6%;border-radius:50%;background:var(--terra);z-index:-1}
+.cal .mark::after{content:"";position:absolute;inset:-4%;border:1px solid var(--terra);border-radius:50% 46% 52% 48%;transform:rotate(-12deg)}
+.cal .muted{color:transparent}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;border:1px solid var(--terra);color:var(--terra);
+  text-decoration:none;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.74em;background:transparent;transition:background .25s,color .25s}
+.btn:hover{background:var(--terra);color:#fff}
+.btn.solid{background:var(--terra);color:#fff}
+.btn.solid:hover{background:#a64f30}
+.btn svg{width:16px;height:16px}
+
+/* countdown */
+.count{display:flex;gap:clamp(14px,5vw,36px);justify-content:center;flex-wrap:wrap}
+.count div{display:grid;justify-items:center;min-width:64px}
+.count b{font-family:var(--f-display);font-weight:400;font-size:clamp(40px,11vw,64px);line-height:1;color:var(--ink)}
+.count small{font-size:.68em;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-dim);margin-top:6px}
+
+/* venue */
+.venue-card{width:min(100%,520px);background:#fffaf1;border-radius:220px 220px 14px 14px;padding:clamp(64px,14vw,90px) 24px 36px;
+  box-shadow:0 30px 60px -36px rgba(80,60,30,.45);display:grid;justify-items:center;gap:14px;position:relative;overflow:hidden}
+.venue-card svg.scene{width:min(100%,300px);height:auto}
+.venue-name{font-family:var(--f-display);font-size:clamp(30px,8vw,44px);line-height:1.1;color:var(--ink)}
+.venue-name em{color:var(--terra)}
+
+/* closing */
+.closing .display{font-size:clamp(34px,9vw,56px);color:var(--olive)}
+.sign{font-family:var(--f-display);font-style:italic;font-size:clamp(26px,7vw,38px);color:var(--terra)}
+.foot{padding:28px 16px 40px;text-align:center;font-size:.72em;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim)}
+
+.divider{width:min(70%,260px);height:auto;color:var(--sage)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="locked">
+<canvas id="scene" aria-hidden="true"></canvas>
+<div id="vignette" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="leaf" d="M0 0 C7 -6 21 -7 32 0 C21 7 7 6 0 0Z"/>
+    <symbol id="olive" viewBox="0 0 220 140">
+      <path d="M8 132 C60 112 112 80 214 18" fill="none" stroke="#6b7a52" stroke-width="2" stroke-linecap="round"/>
+      <path d="M96 88 C110 100 128 104 146 102" fill="none" stroke="#6b7a52" stroke-width="1.5" stroke-linecap="round"/>
+      <g fill="#8a9a72">
+        <use href="#leaf" transform="translate(30 124) rotate(-78)"/>
+        <use href="#leaf" transform="translate(42 118) rotate(18)"/>
+        <use href="#leaf" transform="translate(62 108) rotate(-70)"/>
+        <use href="#leaf" transform="translate(76 100) rotate(24)"/>
+        <use href="#leaf" transform="translate(104 82) rotate(-64)"/>
+        <use href="#leaf" transform="translate(126 70) rotate(12)"/>
+        <use href="#leaf" transform="translate(146 58) rotate(-60)"/>
+        <use href="#leaf" transform="translate(166 46) rotate(8)"/>
+        <use href="#leaf" transform="translate(184 34) rotate(-52)"/>
+        <use href="#leaf" transform="translate(200 26) rotate(-18) scale(.8)"/>
+      </g>
+      <g fill="#a7b48f">
+        <use href="#leaf" transform="translate(118 96) rotate(40) scale(.85)"/>
+        <use href="#leaf" transform="translate(136 103) rotate(-8) scale(.8)"/>
+      </g>
+      <g fill="#4c5a3a">
+        <ellipse cx="146" cy="104" rx="6" ry="8" transform="rotate(-20 146 104)"/>
+        <ellipse cx="90" cy="98" rx="5.5" ry="7.5" transform="rotate(30 90 98)"/>
+      </g>
+      <!-- orange blossoms -->
+      <g transform="translate(58 92)">
+        <g fill="#fffaf1" stroke="#e6c9b4" stroke-width="1">
+          <ellipse rx="5" ry="10" cy="-8"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(72)"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(144)"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(216)"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(288)"/>
+        </g>
+        <circle r="3.6" fill="#e2b34a"/>
+      </g>
+      <g transform="translate(176 22) scale(.75)">
+        <g fill="#fffaf1" stroke="#e6c9b4" stroke-width="1">
+          <ellipse rx="5" ry="10" cy="-8"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(72)"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(144)"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(216)"/><ellipse rx="5" ry="10" cy="-8" transform="rotate(288)"/>
+        </g>
+        <circle r="3.6" fill="#e2b34a"/>
+      </g>
+      <circle cx="72" cy="80" r="3.4" fill="#fffaf1" stroke="#e6c9b4"/>
+      <circle cx="190" cy="40" r="2.8" fill="#fffaf1" stroke="#e6c9b4"/>
+    </symbol>
+    <symbol id="sprig" viewBox="0 0 260 30">
+      <path d="M10 15 H250" stroke="currentColor" stroke-width="1"/>
+      <g fill="currentColor">
+        <use href="#leaf" transform="translate(130 15) rotate(-35) scale(.6)"/>
+        <use href="#leaf" transform="translate(130 15) rotate(-145) scale(.6)"/>
+        <use href="#leaf" transform="translate(130 15) rotate(35) scale(.6)"/>
+        <use href="#leaf" transform="translate(130 15) rotate(145) scale(.6)"/>
+      </g>
+      <circle cx="130" cy="15" r="3" fill="#c0603d"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div id="intro">
+  <p class="label">Khadija &amp; Ilyass &nbsp;·&nbsp; 24.07.2027</p>
+  <button class="hint" id="openBtn">Touchez la <b>carte</b> pour la retourner</button>
+</div>
+
+<main id="main">
+  <section class="hero" aria-label="Invitation">
+    <h1 class="sr">Khadija &amp; Ilyass ont la joie de vous convier à la célébration de leur mariage, samedi 24 juillet 2027, Complexe Dar Annassim.</h1>
+    <div class="scroll-cue" aria-hidden="true">Défiler<i></i></div>
+  </section>
+  <section aria-labelledby="dateTitle">
+    <div class="wrap panel">
+      <p class="label rv" id="dateTitle">Réservez la date</p>
+      <div class="date-big rv">
+        <span class="side">Samedi</span>
+        <span class="day">24</span>
+        <span class="side">Juillet</span>
+      </div>
+      <p class="year rv">deux mille vingt-sept</p>
+      <div class="cal rv" aria-label="Calendrier de juillet 2027, le samedi 24 est entouré">
+        <span class="h">L</span><span class="h">M</span><span class="h">M</span><span class="h">J</span><span class="h">V</span><span class="h">S</span><span class="h">D</span>
+        <span class="muted">.</span><span class="muted">.</span><span class="muted">.</span>
+        <span>1</span><span>2</span><span>3</span><span>4</span>
+        <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+        <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+        <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span class="mark">24</span><span>25</span>
+        <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+      </div>
+      <a class="btn rv" id="ics" download="Mariage-Khadija-Ilyass.ics" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        Ajouter à mon agenda
+      </a>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+  <section aria-labelledby="cdTitle">
+    <div class="wrap panel" style="border-radius:18px;padding-top:40px">
+      <p class="label rv" id="cdTitle">Plus que</p>
+      <div class="count rv" id="count" aria-live="off">
+        <div><b data-k="d">—</b><small>jours</small></div>
+        <div><b data-k="h">—</b><small>heures</small></div>
+        <div><b data-k="m">—</b><small>minutes</small></div>
+      </div>
+      <svg class="divider rv" viewBox="0 0 260 30" aria-hidden="true"><use href="#sprig"/></svg>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+  <section aria-labelledby="venueTitle">
+    <div class="venue-card rv">
+      <p class="label" id="venueTitle">Le lieu</p>
+      <svg class="scene" viewBox="0 0 300 150" aria-hidden="true">
+        <circle cx="150" cy="70" r="46" fill="#f3d9b8"/>
+        <path d="M30 140 V80 h40 V140 M230 140 V80 h40 V140" fill="#efe1cc"/>
+        <path d="M96 140 V70 C96 40 120 24 150 20 C180 24 204 40 204 70 V140 Z" fill="#fffaf1" stroke="#c0603d" stroke-width="1.5"/>
+        <path d="M118 140 V82 C118 62 132 52 150 50 C168 52 182 62 182 82 V140 Z" fill="#d9e8e6" stroke="#c0603d" stroke-width="1"/>
+        <path d="M150 50 V140" stroke="#c0603d" stroke-width=".8" opacity=".5"/>
+        <path d="M30 80 l20 -14 l20 14 M230 80 l20 -14 l20 14" fill="none" stroke="#c0603d" stroke-width="1"/>
+        <g transform="translate(36 118) scale(.36)"><use href="#olive" width="220" height="140"/></g>
+        <g transform="translate(264 118) scale(-.36 .36)"><use href="#olive" width="220" height="140"/></g>
+        <path d="M10 140 H290" stroke="#8a9a72" stroke-width="1.2"/>
+      </svg>
+      <h2 class="venue-name">Complexe<br><em>Dar Annassim</em></h2>
+      <p style="color:var(--ink-dim)">Samedi 24 juillet 2027</p>
+      <a class="btn solid" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Complexe+Dar+Annassim">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Voir l'itinéraire
+      </a>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+  <section class="closing" aria-label="Mot de la fin">
+    <div class="wrap panel">
+      <svg class="branch rv" style="position:static;width:180px" viewBox="0 0 220 140" aria-hidden="true"><use href="#olive"/></svg>
+      <p class="display rv">Votre présence sera<br>notre plus beau cadeau</p>
+      <p class="rv" style="color:var(--ink-dim);max-width:24em">Nous serons heureux de partager avec vous ce jour si précieux, sous la douce brise de l'été.</p>
+      <p class="sign rv">Khadija &amp; Ilyass</p>
+    </div>
+  </section>
+  <div class="spacer" style="height:40svh"></div>
+  <footer class="foot panel" style="border-radius:0;padding:28px 16px 40px">24 · 07 · 2027 — Complexe Dar Annassim</footer>
+</main>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const body = document.body, intro = document.getElementById('intro');
+
+/* ---------------- page bits ---------------- */
+function reveal(){
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.15});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+}
+const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//KI//Mariage//FR','BEGIN:VEVENT','UID:khadija-ilyass-20270724','DTSTAMP:20261106T000000Z',
+  'DTSTART;VALUE=DATE:20270724','DTEND;VALUE=DATE:20270725','SUMMARY:Mariage de Khadija & Ilyass','LOCATION:Complexe Dar Annassim','END:VEVENT','END:VCALENDAR'].join('\r\n');
+document.getElementById('ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+const target = new Date(2027,6,24).getTime(), cells = {};
+document.querySelectorAll('#count b').forEach(b => cells[b.dataset.k] = b);
+function tick(){
+  const ms = Math.max(0, target - Date.now());
+  cells.d.textContent = Math.floor(ms/864e5);
+  cells.h.textContent = String(Math.floor(ms/36e5)%24).padStart(2,'0');
+  cells.m.textContent = String(Math.floor(ms/6e4)%60).padStart(2,'0');
+}
+tick(); setInterval(tick, 30000);
+
+let opened = false, openT = -1;
+function finishIntro(){
+  intro.classList.add('gone'); body.classList.remove('locked'); reveal();
+  setTimeout(() => intro.remove(), 900);
+}
+
+/* ---------------- renderer ---------------- */
+const cv = document.getElementById('scene');
+let renderer = null;
+try { renderer = new THREE.WebGLRenderer({canvas:cv, antialias:true}); } catch(e){}
+if(!renderer){ intro.addEventListener('click', () => { if(!opened){ opened = true; finishIntro(); } }); throw new Error('no webgl'); }
+
+const mobile = innerWidth < 700;
+renderer.setPixelRatio(Math.min(mobile ? 2 : 1.75, devicePixelRatio || 1));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = .84;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.VSMShadowMap;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xe9dfcd);
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(renderer), .04).texture;
+
+const camera = new THREE.PerspectiveCamera(30, 1, .1, 60);
+
+/* ---------------- canvas texture helpers ---------------- */
+const MAXA = renderer.capabilities.getMaxAnisotropy();
+function canvas(w,h){ const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+function tex(c, color){ const t = new THREE.CanvasTexture(c); t.anisotropy = MAXA; if(color) t.colorSpace = THREE.SRGBColorSpace; return t; }
+function fibres(g,w,h,amt){
+  const img = g.getImageData(0,0,w,h), d = img.data;
+  for(let i=0;i<d.length;i+=4){ const n = (Math.random()-.5)*amt; d[i]+=n; d[i+1]+=n; d[i+2]+=n; }
+  g.putImageData(img,0,0);
+}
+
+/* One layout drawn into 4 maps: colour, bump (letterpress), metalness + roughness (gold foil). */
+const GOLD = '#c9a35b', TERRA = '#b4573a', INK = '#3b3a2e', OLIVE = '#4c5a3a';
+function printJob(w, h, paper, layout){
+  const maps = {};
+  for(const mode of ['color','bump','metal','rough']){
+    const c = canvas(w,h), g = c.getContext('2d');
+    g.fillStyle = mode==='color' ? paper : mode==='bump' ? '#ffffff' : mode==='metal' ? '#000000' : '#d8d8d8';
+    g.fillRect(0,0,w,h);
+    if(mode==='color' || mode==='bump') fibres(g,w,h, mode==='color' ? 9 : 14);
+    const P = {
+      g, w, h, mode,
+      style(kind, col){
+        if(mode==='color') return kind==='deboss' ? 'rgba(0,0,0,0.07)' : (kind==='foil' ? GOLD : col);
+        if(mode==='bump') return kind==='foil' ? '#a0a0a0' : kind==='deboss' ? '#888888' : '#b8b8b8';
+        if(mode==='metal') return kind==='foil' ? '#ffffff' : '#000000';
+        return kind==='foil' ? '#555555' : '#d8d8d8';
+      },
+      text(str, x, y, font, kind, col, spacing){
+        g.font = font; g.fillStyle = P.style(kind, col); g.textAlign = 'center'; g.textBaseline = 'alphabetic';
+        g.letterSpacing = (spacing || 0) + 'px';
+        g.fillText(str, x, y); g.letterSpacing = '0px';
+      },
+      stroke(fn, lw, kind, col){ g.lineWidth = lw; g.strokeStyle = P.style(kind, col); g.beginPath(); fn(g); g.stroke(); },
+      fill(fn, kind, col){ g.fillStyle = P.style(kind, col); g.beginPath(); fn(g); g.fill(); }
+    };
+    layout(P);
+    if(mode==='bump'){ const b = canvas(w,h), bg = b.getContext('2d'); bg.filter = 'blur(1.2px)'; bg.drawImage(c,0,0); maps[mode] = b; }
+    else maps[mode] = c;
+  }
+  return { map: tex(maps.color, true), bumpMap: tex(maps.bump), metalnessMap: tex(maps.metal), roughnessMap: tex(maps.rough) };
+}
+const leafPath = g => { g.moveTo(0,0); g.bezierCurveTo(10,-9,30,-9,44,0); g.bezierCurveTo(30,9,10,9,0,0); };
+function sprig(P, cx, cy, s, kind, col){
+  const g = P.g;
+  g.save(); g.translate(cx,cy); g.scale(s,s);
+  P.stroke(g => { g.moveTo(-120,0); g.lineTo(120,0); }, 1.6/s, kind, col);
+  for(const a of [-.6,.6,Math.PI-.6,Math.PI+.6]){ g.save(); g.rotate(a); P.fill(leafPath, kind, col); g.restore(); }
+  P.fill(g => g.arc(0,0,4.5,0,7), 'ink', TERRA);
+  g.restore();
+}
+function border(P, inset, kind){
+  const {w,h} = P;
+  P.stroke(g => g.rect(inset,inset,w-inset*2,h-inset*2), 3, kind);
+  P.stroke(g => g.rect(inset+14,inset+14,w-inset*2-28,h-inset*2-28), 1.2, kind);
+}
+
+/* ---------------- prints ---------------- */
+const W = 1.0, H = 1.4, T = .018;
+const R = 1400, RH = Math.round(R*H/W);
+let texFront, texBack;
+// olive wreath (gold foil) with the monogram
+function wreath(P, cx, cy, r, kind){
+  const g = P.g;
+  for(const side of [-1,1]){
+    P.stroke(g => { g.arc(cx, cy, r, side<0 ? Math.PI*.62 : Math.PI*.38, side<0 ? Math.PI*1.42 : -Math.PI*.42, side>0); }, 2.4, kind);
+    for(let i=0;i<9;i++){
+      const a = Math.PI/2 + side*(.28 + i*.25), x = cx + Math.cos(a)*r, y = cy + Math.sin(a)*r;
+      for(const o of [-1,1]){
+        g.save(); g.translate(x,y); g.rotate(a + side*Math.PI/2 + o*.55 + (side<0?Math.PI:0)); g.scale(.62 - i*.025, .62 - i*.025);
+        P.fill(leafPath, kind); g.restore();
+      }
+    }
+  }
+}
+function buildPrints(){
+  texFront = printJob(R, RH, '#fbf7ef', P => {
+    const {w,h} = P, c = w/2;
+    P.stroke(g => g.rect(56,56,w-112,h-112), 2.4, 'foil');
+    P.stroke(g => g.rect(74,74,w-148,h-148), 1, 'foil');
+    wreath(P, c, 250, 92, 'foil');
+    P.text('K', c-26, 268, 'italic 400 64px "Playfair Display"', 'ink', INK);
+    P.text('I', c+28, 268, 'italic 400 64px "Playfair Display"', 'ink', INK);
+    P.stroke(g => { g.moveTo(c+6,212); g.lineTo(c-6,292); }, 1.4, 'foil');
+    P.text('ومن آياته أن خلق لكم من أنفسكم أزواجا لتسكنوا إليها', c, 432, '400 38px "Aref Ruqaa"', 'ink', OLIVE);
+    P.text('وجعل بينكم مودة ورحمة', c, 486, '400 38px "Aref Ruqaa"', 'ink', OLIVE);
+    P.text('ENSEMBLE AVEC LEURS FAMILLES', c, 600, '500 27px Jost', 'ink', TERRA, 9);
+    P.text('ont la joie de vous convier à la célébration de leur mariage', c, 652, '300 30px Jost', 'ink', '#5f5a48');
+    P.text('Khadija', c, 860, 'italic 400 210px "Playfair Display"', 'ink', INK);
+    P.text('&', c, 980, 'italic 400 104px "Playfair Display"', 'foil');
+    P.text('Ilyass', c, 1170, 'italic 400 210px "Playfair Display"', 'ink', INK);
+    // date row between hairlines
+    const y = 1370;
+    P.stroke(g => { g.moveTo(230,y-62); g.lineTo(w-230,y-62); g.moveTo(230,y+40); g.lineTo(w-230,y+40); }, 1.2, 'foil');
+    P.stroke(g => { g.moveTo(c-150,y-40); g.lineTo(c-150,y+20); g.moveTo(c+150,y-40); g.lineTo(c+150,y+20); }, 1.2, 'foil');
+    P.text('SAMEDI', c-300, y, '500 30px Jost', 'ink', INK, 10);
+    P.text('24 JUILLET', c, y, '500 32px Jost', 'ink', TERRA, 8);
+    P.text('2027', c+300, y, '500 30px Jost', 'ink', INK, 10);
+    P.text('Votre présence sera notre plus beau cadeau', c, 1490, 'italic 400 30px "Playfair Display"', 'ink', '#6f6a58');
+    P.text('COMPLEXE', c, 1640, '500 26px Jost', 'ink', OLIVE, 12);
+    P.text('Dar Annassim', c, 1730, 'italic 400 84px "Playfair Display"', 'ink', TERRA);
+    sprig(P, c, 1835, 1, 'ink', '#7f8f68');
+  });
+  texBack = printJob(R, RH, '#55613f', P => {
+    const {w,h} = P, c = w/2;
+    P.stroke(g => g.rect(56,56,w-112,h-112), 2.4, 'foil');
+    P.stroke(g => g.rect(74,74,w-148,h-148), 1, 'foil');
+    wreath(P, c, h/2-60, 220, 'foil');
+    P.text('K', c-62, h/2-20, 'italic 400 150px "Playfair Display"', 'foil');
+    P.text('I', c+66, h/2-20, 'italic 400 150px "Playfair Display"', 'foil');
+    P.stroke(g => { g.moveTo(c+14,h/2-150); g.lineTo(c-14,h/2+30); }, 2.4, 'foil');
+    P.text('KHADIJA  &  ILYASS', c, h/2+300, '500 34px Jost', 'foil', null, 14);
+    P.text('24 · 07 · 2027', c, h/2+370, '500 28px Jost', 'foil', null, 10);
+  });
+}
+
+function paperMat(p, extra){
+  return new THREE.MeshStandardMaterial(Object.assign({
+    map: p.map, bumpMap: p.bumpMap, bumpScale: 1.2, metalnessMap: p.metalnessMap, roughnessMap: p.roughnessMap,
+    metalness: 1, roughness: 1, envMapIntensity: .45
+  }, extra || {}));
+}
+function halfTex(src, right){
+  const c = t => { const n = t.clone(); n.repeat.set(.5,1); n.offset.set(right ? .5 : 0, 0); n.needsUpdate = true; return n; };
+  return { map: c(src.map), bumpMap: c(src.bumpMap), metalnessMap: c(src.metalnessMap), roughnessMap: c(src.roughnessMap) };
+}
+
+/* ---------------- card ---------------- */
+const card = new THREE.Group(), flipper = new THREE.Group();
+function buildCard(){
+  const edge = new THREE.MeshStandardMaterial({color:0xf1eadc, roughness:.95});
+  const m = new THREE.Mesh(new THREE.BoxGeometry(W,H,T), [edge,edge,edge,edge, paperMat(texFront), paperMat(texBack,{bumpScale:1.6})]);
+  m.castShadow = m.receiveShadow = true;
+  flipper.add(m); card.add(flipper);
+  card.rotation.x = -Math.PI/2;
+  card.position.y = T/2;
+  scene.add(card);
+}
+
+/* ---------------- table linen ---------------- */
+function linen(){
+  const c = canvas(512,512), g = c.getContext('2d');
+  g.fillStyle = '#e6dac5'; g.fillRect(0,0,512,512);
+  for(let y=0;y<512;y+=2){ g.fillStyle = `rgba(255,248,232,${Math.random()*.25})`; g.fillRect(0,y,512,1); }
+  for(let x=0;x<512;x+=2){ g.fillStyle = `rgba(110,90,60,${Math.random()*.12})`; g.fillRect(x,0,1,512); }
+  for(let i=0;i<220;i++){ g.fillStyle = `rgba(110,90,60,${Math.random()*.12})`; g.fillRect(Math.random()*512, Math.random()*512, 1.4, 6+Math.random()*30); }
+  const m = tex(c,true), b = tex(c);
+  [m,b].forEach(t => { t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(9,9); });
+  const plane = new THREE.Mesh(new THREE.PlaneGeometry(30,30), new THREE.MeshStandardMaterial({map:m, bumpMap:b, bumpScale:1.5, roughness:.95, envMapIntensity:.3}));
+  plane.rotation.x = -Math.PI/2; plane.receiveShadow = true; scene.add(plane);
+}
+
+/* ---------------- sunlight through olive leaves ---------------- */
+const sun = new THREE.DirectionalLight(0xffe1b5, 3.4);
+sun.position.set(-3.4, 7, 2.4);
+sun.castShadow = true;
+sun.shadow.mapSize.set(1024,1024);
+Object.assign(sun.shadow.camera, {left:-3, right:3, top:3, bottom:-3, near:.5, far:20});
+sun.shadow.bias = -.0004; sun.shadow.radius = 9; sun.shadow.blurSamples = 16;
+scene.add(sun, sun.target);
+scene.add(new THREE.HemisphereLight(0xeef3f4, 0xc9ad84, .45));
+
+const leaves = new THREE.Group();
+function leafCanvas(){
+  const c = canvas(1024,1024), g = c.getContext('2d');
+  g.fillStyle = '#000'; g.fillRect(0,0,1024,1024); g.fillStyle = '#fff'; g.strokeStyle = '#fff'; g.lineCap = 'round';
+  function branch(x,y,ang,len,depth){
+    const ex = x + Math.cos(ang)*len, ey = y + Math.sin(ang)*len;
+    g.lineWidth = 7 - depth*2.5; g.beginPath(); g.moveTo(x,y); g.quadraticCurveTo((x+ex)/2+24,(y+ey)/2-24,ex,ey); g.stroke();
+    const n = Math.floor(len/34);
+    for(let i=1;i<=n;i++){
+      const t = i/n, px = x + (ex-x)*t, py = y + (ey-y)*t;
+      for(const side of [-1,1]){
+        g.save(); g.translate(px,py); g.rotate(ang + side*(.6+Math.random()*.5)); g.scale(1.6+Math.random()*.5, 1.3);
+        g.beginPath(); leafPath(g); g.fill(); g.restore();
+      }
+    }
+    if(depth < 2) for(let k=0;k<2;k++) branch(x+(ex-x)*(.35+k*.3), y+(ey-y)*(.35+k*.3), ang + (k?-.75:.75), len*.55, depth+1);
+  }
+  branch(-40, 980, -1.0, 760, 0);
+  branch(1060, 140, 2.5, 640, 0);
+  branch(1060, 880, -2.6, 520, 1);
+  return c;
+}
+function buildLeaves(){
+  const lt = tex(leafCanvas());
+  const depthMat = new THREE.MeshDepthMaterial({depthPacking: THREE.RGBADepthPacking, alphaMap: lt, alphaTest: .5});
+  const invisible = new THREE.MeshBasicMaterial({colorWrite:false, depthWrite:false, alphaMap: lt, alphaTest: .5, side: THREE.DoubleSide});
+  const spots = [[-1.5,0,-1.2,.3],[1.2,.2,1.1,2.6]];
+  for(let i=0;i<spots.length;i++){
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(3.4,3.4), invisible);
+    m.customDepthMaterial = depthMat; m.castShadow = true;
+    m.rotation.x = -Math.PI/2; m.rotation.z = spots[i][3];
+    m.position.set(spots[i][0], spots[i][1], spots[i][2]);
+    m.userData = {ph:i*1.7, x:m.position.x, z:m.position.z, r:m.rotation.z};
+    leaves.add(m);
+  }
+  leaves.position.copy(sun.position).multiplyScalar(.4);
+  scene.add(leaves);
+}
+
+/* ---------------- build ---------------- */
+if(document.fonts){
+  const fams = ['italic 400 100px "Playfair Display"','italic 500 100px "Playfair Display"','600 100px "Playfair Display"','500 100px "Playfair Display"','500 30px Jost','300 30px Jost','400 50px "Aref Ruqaa"'];
+  await Promise.race([Promise.all(fams.map(f => document.fonts.load(f, /Ruqaa/.test(f) ? 'ومن آياته' : 'Khadija & Ilyass 2407'))), new Promise(r => setTimeout(r, 3500))]);
+}
+buildPrints(); buildCard(); linen(); buildLeaves();
+const STILL = location.search.includes('carte');
+if(STILL){ leaves.visible = false; scene.traverse(o => { if(o.isMesh && o.geometry.type === 'PlaneGeometry' && o.parent === scene) o.visible = false; }); }
+
+function size(){ renderer.setSize(innerWidth, innerHeight, false); camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); }
+size(); addEventListener('resize', size);
+let mx = 0, my = 0;
+addEventListener('pointermove', e => { mx = e.clientX/innerWidth - .5; my = e.clientY/innerHeight - .5; });
+addEventListener('deviceorientation', e => { if(e.gamma != null){ mx = Math.max(-.5,Math.min(.5,e.gamma/50)); my = Math.max(-.5,Math.min(.5,(e.beta-50)/50)); } });
+
+let clock = 0;
+function open(){ if(opened) return; opened = true; openT = clock; setTimeout(finishIntro, reduce ? 50 : 2400); }
+intro.addEventListener('click', open);
+if(location.hash === '#ouvert'){ opened = true; openT = -100; intro.remove(); body.classList.remove('locked'); reveal(); }
+
+const ease = x => { x = Math.max(0,Math.min(1,x)); return x<.5 ? 4*x*x*x : 1-Math.pow(-2*x+2,3)/2; };
+const lerp = (a,b,t) => a + (b-a)*t;
+function fitDist(wd, ht){
+  const vf = THREE.MathUtils.degToRad(camera.fov), hf = 2*Math.atan(Math.tan(vf/2)*camera.aspect);
+  return Math.max(ht/2/Math.tan(vf/2), wd/2/Math.tan(hf/2));
+}
+
+let last = performance.now(), sScroll = 0;
+function frame(now){
+  const dt = Math.min(.05,(now-last)/1000); last = now; clock += dt;
+  const e = !opened ? 0 : (clock - openT) * (reduce ? 20 : 1);
+
+  // the card lifts, turns over gracefully and settles back on the linen
+  const f = ease((e-.05)/1.9);
+  flipper.rotation.y = Math.PI*(1-f);
+  flipper.rotation.x = Math.sin(f*Math.PI)*.18;
+  card.position.y = T/2 + Math.sin(f*Math.PI)*.42;
+  card.rotation.z = Math.sin(f*Math.PI)*.12 + (1-f)*.06;
+
+  // camera
+  const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  sScroll = lerp(sScroll, opened ? scrollY/max : 0, Math.min(1, dt*4));
+  const k = ease((e-.3)/2.3);
+  const portrait = camera.aspect < 1;
+  let d = lerp(fitDist(W*1.35, H*1.35), fitDist(W*(portrait ? 1.12 : 1.3), H*1.16), k);
+  d *= 1 + sScroll*.8;
+  const pitch = lerp(1.05, 1.4, k) - sScroll*.2 - my*.06;
+  const yaw = lerp(-.28, 0, k) + mx*.14 + Math.sin(clock*.13)*.025;
+  camera.position.set(Math.sin(yaw)*Math.cos(pitch)*d, Math.sin(pitch)*d, Math.cos(yaw)*Math.cos(pitch)*d);
+  camera.lookAt(0, 0, lerp(.04, 0, k) + sScroll*.5);
+
+  if(STILL){ camera.fov = 8; camera.updateProjectionMatrix(); const dd = fitDist(W, H); camera.position.set(0, dd, 0.0001); camera.lookAt(0,0,0); }
+
+  // breeze: leaves sway, light flickers softly
+  for(const m of leaves.children){
+    const u = m.userData;
+    m.position.x = u.x + Math.sin(clock*.55+u.ph)*.07 + Math.sin(clock*1.7+u.ph)*.012;
+    m.position.z = u.z + Math.cos(clock*.4+u.ph*1.3)*.05;
+    m.rotation.z = u.r + Math.sin(clock*.35+u.ph)*.035;
+  }
+  sun.intensity = 3.4 + Math.sin(clock*.7)*.1;
+
+  renderer.render(scene, camera);
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+</script>
+</body>
+</html>
