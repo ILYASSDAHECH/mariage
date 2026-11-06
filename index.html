@@ -397,15 +397,15 @@ const W = 1.0, H = 1.4, T = .018;
 const R = 1400, RH = Math.round(R*H/W);
 let texFront, texBack;
 // olive wreath (gold foil) with the monogram
-function wreath(P, cx, cy, r, kind){
+function wreath(P, cx, cy, r, kind, col){
   const g = P.g;
   for(const side of [-1,1]){
-    P.stroke(g => { g.arc(cx, cy, r, side<0 ? Math.PI*.62 : Math.PI*.38, side<0 ? Math.PI*1.42 : -Math.PI*.42, side>0); }, 2.4, kind);
+    P.stroke(g => { g.arc(cx, cy, r, side<0 ? Math.PI*.62 : Math.PI*.38, side<0 ? Math.PI*1.42 : -Math.PI*.42, side>0); }, 2.4, kind, col);
     for(let i=0;i<9;i++){
       const a = Math.PI/2 + side*(.28 + i*.25), x = cx + Math.cos(a)*r, y = cy + Math.sin(a)*r;
       for(const o of [-1,1]){
         g.save(); g.translate(x,y); g.rotate(a + side*Math.PI/2 + o*.55 + (side<0?Math.PI:0)); g.scale(.62 - i*.025, .62 - i*.025);
-        P.fill(leafPath, kind); g.restore();
+        P.fill(leafPath, kind, col); g.restore();
       }
     }
   }
@@ -413,22 +413,22 @@ function wreath(P, cx, cy, r, kind){
 function buildPrints(){
   texFront = printJob(R, RH, '#bccaa0', P => {
     const {w,h} = P, c = w/2;
-    P.stroke(g => g.rect(56,56,w-112,h-112), 2.4, 'foil');
-    P.stroke(g => g.rect(74,74,w-148,h-148), 1, 'foil');
-    wreath(P, c, 240, 100, 'foil');
+    P.stroke(g => g.rect(56,56,w-112,h-112), 5, 'ink', '#8a6a2c');
+    P.stroke(g => g.rect(78,78,w-156,h-156), 2.2, 'ink', '#8a6a2c');
+    wreath(P, c, 240, 100, 'ink', '#8a6a2c');
     P.text('K', c-30, 262, 'italic 400 76px "Playfair Display"', 'ink', INK);
     P.text('I', c+32, 262, 'italic 400 76px "Playfair Display"', 'ink', INK);
-    P.stroke(g => { g.moveTo(c+7,196); g.lineTo(c-7,290); }, 1.6, 'foil');
+    P.stroke(g => { g.moveTo(c+7,196); g.lineTo(c-7,290); }, 2, 'ink', '#8a6a2c');
     P.text('ومن آياته أن خلق لكم من أنفسكم أزواجا لتسكنوا إليها', c, 438, '400 54px "Aref Ruqaa"', 'ink', OLIVE);
     P.text('وجعل بينكم مودة ورحمة', c, 514, '400 54px "Aref Ruqaa"', 'ink', OLIVE);
     P.text('ENSEMBLE AVEC LEURS FAMILLES', c, 622, '500 36px Jost', 'ink', TERRA, 10);
     P.text('ont la joie de vous convier à la célébration de leur mariage', c, 688, '400 46px Jost', 'ink', '#1f1e18');
     P.text('Khadija', c, 892, 'italic 400 200px "Playfair Display"', 'ink', INK);
-    P.text('&', c, 1004, 'italic 400 100px "Playfair Display"', 'foil');
+    P.text('&', c, 1004, 'italic 400 100px "Playfair Display"', 'ink', '#8a6a2c');
     P.text('Ilyass', c, 1186, 'italic 400 200px "Playfair Display"', 'ink', INK);
     const y = 1380;
-    P.stroke(g => { g.moveTo(150,y-74); g.lineTo(w-150,y-74); g.moveTo(150,y+46); g.lineTo(w-150,y+46); }, 1.4, 'foil');
-    P.stroke(g => { g.moveTo(c-178,y-50); g.lineTo(c-178,y+22); g.moveTo(c+178,y-50); g.lineTo(c+178,y+22); }, 1.4, 'foil');
+    P.stroke(g => { g.moveTo(150,y-74); g.lineTo(w-150,y-74); g.moveTo(150,y+46); g.lineTo(w-150,y+46); }, 2.4, 'ink', '#8a6a2c');
+    P.stroke(g => { g.moveTo(c-178,y-50); g.lineTo(c-178,y+22); g.moveTo(c+178,y-50); g.lineTo(c+178,y+22); }, 2.4, 'ink', '#8a6a2c');
     P.text('SAMEDI', c-345, y, '500 44px Jost', 'ink', INK, 8);
     P.text('24 JUILLET', c, y, '500 48px Jost', 'ink', TERRA, 6);
     P.text('2027', c+345, y, '500 44px Jost', 'ink', INK, 8);
